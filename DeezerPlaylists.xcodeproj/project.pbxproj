@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		903CF41B2B08EAFE00B1A54E /* DependenciesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903CF41A2B08EAFE00B1A54E /* DependenciesContainer.swift */; };
+		9077DA262B0903FF0077FDB8 /* DeezerSdk in Frameworks */ = {isa = PBXBuildFile; productRef = 9077DA252B0903FF0077FDB8 /* DeezerSdk */; };
 		90ACFB062B0847E700D13B1F /* DeezerPlaylistsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ACFB052B0847E700D13B1F /* DeezerPlaylistsApp.swift */; };
 		90ACFB082B0847E700D13B1F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ACFB072B0847E700D13B1F /* ContentView.swift */; };
 		90ACFB0A2B0847E800D13B1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90ACFB092B0847E800D13B1F /* Assets.xcassets */; };
 		90ACFB0E2B0847E800D13B1F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90ACFB0D2B0847E800D13B1F /* Preview Assets.xcassets */; };
 		90ACFB182B0847E800D13B1F /* DeezerPlaylistsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ACFB172B0847E800D13B1F /* DeezerPlaylistsTests.swift */; };
-		90ACFB222B0847E800D13B1F /* DeezerPlaylistsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ACFB212B0847E800D13B1F /* DeezerPlaylistsUITests.swift */; };
-		90ACFB242B0847E800D13B1F /* DeezerPlaylistsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ACFB232B0847E800D13B1F /* DeezerPlaylistsUITestsLaunchTests.swift */; };
+		90E3B2BE2B084ED3002CACF2 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 90E3B2BD2B084ED3002CACF2 /* RswiftLibrary */; };
+		90E3B2C42B085031002CACF2 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 90E3B2C32B085031002CACF2 /* GRDB */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,16 +26,11 @@
 			remoteGlobalIDString = 90ACFB012B0847E700D13B1F;
 			remoteInfo = DeezerPlaylists;
 		};
-		90ACFB1E2B0847E800D13B1F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 90ACFAFA2B0847E700D13B1F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 90ACFB012B0847E700D13B1F;
-			remoteInfo = DeezerPlaylists;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		903CF41A2B08EAFE00B1A54E /* DependenciesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesContainer.swift; sourceTree = "<group>"; };
+		903CF4212B08F65B00B1A54E /* DeezerSdk */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = DeezerSdk; sourceTree = "<group>"; };
 		90ACFB022B0847E700D13B1F /* DeezerPlaylists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeezerPlaylists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90ACFB052B0847E700D13B1F /* DeezerPlaylistsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerPlaylistsApp.swift; sourceTree = "<group>"; };
 		90ACFB072B0847E700D13B1F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,9 +39,6 @@
 		90ACFB0D2B0847E800D13B1F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		90ACFB132B0847E800D13B1F /* DeezerPlaylistsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeezerPlaylistsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		90ACFB172B0847E800D13B1F /* DeezerPlaylistsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerPlaylistsTests.swift; sourceTree = "<group>"; };
-		90ACFB1D2B0847E800D13B1F /* DeezerPlaylistsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeezerPlaylistsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		90ACFB212B0847E800D13B1F /* DeezerPlaylistsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerPlaylistsUITests.swift; sourceTree = "<group>"; };
-		90ACFB232B0847E800D13B1F /* DeezerPlaylistsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerPlaylistsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +46,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90E3B2BE2B084ED3002CACF2 /* RswiftLibrary in Frameworks */,
+				90E3B2C42B085031002CACF2 /* GRDB in Frameworks */,
+				9077DA262B0903FF0077FDB8 /* DeezerSdk in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,23 +59,47 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		90ACFB1A2B0847E800D13B1F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		903CF4182B08EAE400B1A54E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				903CF4192B08EAF000B1A54E /* DI */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		903CF4192B08EAF000B1A54E /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				903CF41A2B08EAFE00B1A54E /* DependenciesContainer.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		903CF41C2B08F00100B1A54E /* PlaylistSdk */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PlaylistSdk;
+			sourceTree = "<group>";
+		};
+		9077DA242B0903FF0077FDB8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		90ACFAF92B0847E700D13B1F = {
 			isa = PBXGroup;
 			children = (
+				903CF4212B08F65B00B1A54E /* DeezerSdk */,
 				90ACFB042B0847E700D13B1F /* DeezerPlaylists */,
 				90ACFB162B0847E800D13B1F /* DeezerPlaylistsTests */,
-				90ACFB202B0847E800D13B1F /* DeezerPlaylistsUITests */,
 				90ACFB032B0847E700D13B1F /* Products */,
+				9077DA242B0903FF0077FDB8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,7 +108,6 @@
 			children = (
 				90ACFB022B0847E700D13B1F /* DeezerPlaylists.app */,
 				90ACFB132B0847E800D13B1F /* DeezerPlaylistsTests.xctest */,
-				90ACFB1D2B0847E800D13B1F /* DeezerPlaylistsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +115,8 @@
 		90ACFB042B0847E700D13B1F /* DeezerPlaylists */ = {
 			isa = PBXGroup;
 			children = (
+				903CF41C2B08F00100B1A54E /* PlaylistSdk */,
+				903CF4182B08EAE400B1A54E /* Common */,
 				90ACFB052B0847E700D13B1F /* DeezerPlaylistsApp.swift */,
 				90ACFB072B0847E700D13B1F /* ContentView.swift */,
 				90ACFB092B0847E800D13B1F /* Assets.xcassets */,
@@ -120,15 +142,6 @@
 			path = DeezerPlaylistsTests;
 			sourceTree = "<group>";
 		};
-		90ACFB202B0847E800D13B1F /* DeezerPlaylistsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				90ACFB212B0847E800D13B1F /* DeezerPlaylistsUITests.swift */,
-				90ACFB232B0847E800D13B1F /* DeezerPlaylistsUITestsLaunchTests.swift */,
-			);
-			path = DeezerPlaylistsUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,8 +156,14 @@
 			buildRules = (
 			);
 			dependencies = (
+				90E3B2C02B084EFC002CACF2 /* PBXTargetDependency */,
 			);
 			name = DeezerPlaylists;
+			packageProductDependencies = (
+				90E3B2BD2B084ED3002CACF2 /* RswiftLibrary */,
+				90E3B2C32B085031002CACF2 /* GRDB */,
+				9077DA252B0903FF0077FDB8 /* DeezerSdk */,
+			);
 			productName = DeezerPlaylists;
 			productReference = 90ACFB022B0847E700D13B1F /* DeezerPlaylists.app */;
 			productType = "com.apple.product-type.application";
@@ -167,24 +186,6 @@
 			productReference = 90ACFB132B0847E800D13B1F /* DeezerPlaylistsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		90ACFB1C2B0847E800D13B1F /* DeezerPlaylistsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 90ACFB2D2B0847E800D13B1F /* Build configuration list for PBXNativeTarget "DeezerPlaylistsUITests" */;
-			buildPhases = (
-				90ACFB192B0847E800D13B1F /* Sources */,
-				90ACFB1A2B0847E800D13B1F /* Frameworks */,
-				90ACFB1B2B0847E800D13B1F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				90ACFB1F2B0847E800D13B1F /* PBXTargetDependency */,
-			);
-			name = DeezerPlaylistsUITests;
-			productName = DeezerPlaylistsUITests;
-			productReference = 90ACFB1D2B0847E800D13B1F /* DeezerPlaylistsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -202,10 +203,6 @@
 						CreatedOnToolsVersion = 15.0.1;
 						TestTargetID = 90ACFB012B0847E700D13B1F;
 					};
-					90ACFB1C2B0847E800D13B1F = {
-						CreatedOnToolsVersion = 15.0.1;
-						TestTargetID = 90ACFB012B0847E700D13B1F;
-					};
 				};
 			};
 			buildConfigurationList = 90ACFAFD2B0847E700D13B1F /* Build configuration list for PBXProject "DeezerPlaylists" */;
@@ -217,13 +214,16 @@
 				Base,
 			);
 			mainGroup = 90ACFAF92B0847E700D13B1F;
+			packageReferences = (
+				90E3B2BC2B084ED3002CACF2 /* XCRemoteSwiftPackageReference "R" */,
+				90E3B2C22B085031002CACF2 /* XCRemoteSwiftPackageReference "GRDB.swift" */,
+			);
 			productRefGroup = 90ACFB032B0847E700D13B1F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				90ACFB012B0847E700D13B1F /* DeezerPlaylists */,
 				90ACFB122B0847E800D13B1F /* DeezerPlaylistsTests */,
-				90ACFB1C2B0847E800D13B1F /* DeezerPlaylistsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -245,13 +245,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		90ACFB1B2B0847E800D13B1F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -259,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				903CF41B2B08EAFE00B1A54E /* DependenciesContainer.swift in Sources */,
 				90ACFB082B0847E700D13B1F /* ContentView.swift in Sources */,
 				90ACFB062B0847E700D13B1F /* DeezerPlaylistsApp.swift in Sources */,
 			);
@@ -272,15 +266,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		90ACFB192B0847E800D13B1F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				90ACFB222B0847E800D13B1F /* DeezerPlaylistsUITests.swift in Sources */,
-				90ACFB242B0847E800D13B1F /* DeezerPlaylistsUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -289,10 +274,9 @@
 			target = 90ACFB012B0847E700D13B1F /* DeezerPlaylists */;
 			targetProxy = 90ACFB142B0847E800D13B1F /* PBXContainerItemProxy */;
 		};
-		90ACFB1F2B0847E800D13B1F /* PBXTargetDependency */ = {
+		90E3B2C02B084EFC002CACF2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 90ACFB012B0847E700D13B1F /* DeezerPlaylists */;
-			targetProxy = 90ACFB1E2B0847E800D13B1F /* PBXContainerItemProxy */;
+			productRef = 90E3B2BF2B084EFC002CACF2 /* RswiftGenerateInternalResources */;
 		};
 /* End PBXTargetDependency section */
 
@@ -349,6 +333,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -404,6 +389,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -442,7 +428,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.chrisjms.DeezerPlaylists;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -480,7 +467,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.chrisjms.DeezerPlaylists;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -533,50 +521,6 @@
 			};
 			name = Release;
 		};
-		90ACFB2E2B0847E800D13B1F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 747M9ENA4N;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MACOSX_DEPLOYMENT_TARGET = 13.6;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.chrisjms.DeezerPlaylistsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = DeezerPlaylists;
-			};
-			name = Debug;
-		};
-		90ACFB2F2B0847E800D13B1F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 747M9ENA4N;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MACOSX_DEPLOYMENT_TARGET = 13.6;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.chrisjms.DeezerPlaylistsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = DeezerPlaylists;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -607,16 +551,47 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		90ACFB2D2B0847E800D13B1F /* Build configuration list for PBXNativeTarget "DeezerPlaylistsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				90ACFB2E2B0847E800D13B1F /* Debug */,
-				90ACFB2F2B0847E800D13B1F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		90E3B2BC2B084ED3002CACF2 /* XCRemoteSwiftPackageReference "R" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift";
+			requirement = {
+				kind = exactVersion;
+				version = 7.4.0;
+			};
+		};
+		90E3B2C22B085031002CACF2 /* XCRemoteSwiftPackageReference "GRDB.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/groue/GRDB.swift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 6.21.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9077DA252B0903FF0077FDB8 /* DeezerSdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DeezerSdk;
+		};
+		90E3B2BD2B084ED3002CACF2 /* RswiftLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 90E3B2BC2B084ED3002CACF2 /* XCRemoteSwiftPackageReference "R" */;
+			productName = RswiftLibrary;
+		};
+		90E3B2BF2B084EFC002CACF2 /* RswiftGenerateInternalResources */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "plugin:RswiftGenerateInternalResources";
+		};
+		90E3B2C32B085031002CACF2 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 90E3B2C22B085031002CACF2 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			productName = GRDB;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 90ACFAFA2B0847E700D13B1F /* Project object */;
 }

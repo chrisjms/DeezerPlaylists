@@ -11,7 +11,20 @@ import SwiftUI
 struct DeezerPlaylistsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
         }
+    }
+}
+
+struct RootView: View {
+    
+    @StateObject private var dependenciesContainter: DependenciesContainer
+    
+    init() {
+        _dependenciesContainter = StateObject(wrappedValue: DependenciesContainer())
+    }
+    
+    var body: some View {
+        EmptyView()
     }
 }
