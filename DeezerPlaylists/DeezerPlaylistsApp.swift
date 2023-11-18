@@ -18,13 +18,13 @@ struct DeezerPlaylistsApp: App {
 
 struct RootView: View {
     
-    @StateObject private var dependenciesContainter: DependenciesContainer
+    @StateObject private var dependenciesContainer: DependenciesContainer
     
     init() {
-        _dependenciesContainter = StateObject(wrappedValue: DependenciesContainer())
+        _dependenciesContainer = StateObject(wrappedValue: DependenciesContainer())
     }
     
     var body: some View {
-        EmptyView()
+        PlaylistsScreen(viewModel: dependenciesContainer.makePlaylistViewModel())
     }
 }

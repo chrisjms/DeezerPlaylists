@@ -12,9 +12,7 @@ public class DeezerSdk {
     private let jsonDecoder = JSONDecoder()
     private let jsonEncoder = JSONEncoder()
     
-    public init() {
-        
-    }
+    public init() {}
     
     struct HttpError: Error {
         let code: Int
