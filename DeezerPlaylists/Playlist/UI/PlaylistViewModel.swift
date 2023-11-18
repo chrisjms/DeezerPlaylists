@@ -12,11 +12,13 @@ class PlaylistViewModel: ObservableObject {
     
     private let playlistRepository: PlaylistRepository
     
+    @Published private (set) var playlists = [Playlist]()
+    
     init(playlistRepository: PlaylistRepository) {
         self.playlistRepository = playlistRepository
         Task {
             do {
-                try await playlistRepository.fetchUserPlaylists()
+                self.playlists = try await playlistRepository.fetchUserPlaylists()
             } catch(let error) {
                 print("error fetching playlists \(error)")
             }

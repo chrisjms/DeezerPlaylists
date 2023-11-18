@@ -8,9 +8,8 @@
 import Foundation
 
 struct Playlist {
-    let id: Int
+    let id: String
     let title: String
-    let description: String
     let duration: Int
-    let nb_tracks: Int
+    let nbtracks: Int
 }

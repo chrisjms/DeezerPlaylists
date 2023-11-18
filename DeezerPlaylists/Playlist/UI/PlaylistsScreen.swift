@@ -10,7 +10,10 @@ import SwiftUI
 struct PlaylistsScreen: View {
     @ObservedObject var viewModel: PlaylistViewModel
     var body: some View {
-        Text("Hello playlists")
+        VStack {
+            Text("Hello playlists")
+            Text("I have \(viewModel.playlists.count) playlists in my Deezer account")
+        }
     }
 }
 
