@@ -26,6 +26,7 @@ internal class PlaylistHttpClient: PlaylistClient {
             let response: PaginatedResponse<DeezerPlaylist> = try await httpClient.get("/user/\(userId)/playlists")
             return response
         }
+        .filter { !$0.is_loved_track }
     }
     
     func getPlaylistinfos() async throws {
