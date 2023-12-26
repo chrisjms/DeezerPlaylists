@@ -24,6 +24,11 @@
 		90ACFB062B0847E700D13B1F /* DeezerPlaylistsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ACFB052B0847E700D13B1F /* DeezerPlaylistsApp.swift */; };
 		90ACFB0A2B0847E800D13B1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90ACFB092B0847E800D13B1F /* Assets.xcassets */; };
 		90ACFB0E2B0847E800D13B1F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90ACFB0D2B0847E800D13B1F /* Preview Assets.xcassets */; };
+		90B5BA322B3B5A4F00E6B2B9 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B5BA312B3B5A4F00E6B2B9 /* Track.swift */; };
+		90B5BA342B3B5D7600E6B2B9 /* TrackDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B5BA332B3B5D7600E6B2B9 /* TrackDb.swift */; };
+		90B5BA382B3B6D9400E6B2B9 /* TrackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B5BA372B3B6D9400E6B2B9 /* TrackViewModel.swift */; };
+		90B5BA3A2B3B6E6100E6B2B9 /* TrackScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B5BA392B3B6E6100E6B2B9 /* TrackScreen.swift */; };
+		90B5BA3E2B3B7EDB00E6B2B9 /* UIPilot in Frameworks */ = {isa = PBXBuildFile; productRef = 90B5BA3D2B3B7EDB00E6B2B9 /* UIPilot */; };
 		90E3B2BE2B084ED3002CACF2 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 90E3B2BD2B084ED3002CACF2 /* RswiftLibrary */; };
 		90E3B2C42B085031002CACF2 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 90E3B2C32B085031002CACF2 /* GRDB */; };
 		90E404DD2B093DE700D8A139 /* AppDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E404DC2B093DE700D8A139 /* AppDatabase.swift */; };
@@ -61,6 +66,10 @@
 		90ACFB0B2B0847E800D13B1F /* DeezerPlaylists.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DeezerPlaylists.entitlements; sourceTree = "<group>"; };
 		90ACFB0D2B0847E800D13B1F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		90ACFB132B0847E800D13B1F /* DeezerPlaylistsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeezerPlaylistsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		90B5BA312B3B5A4F00E6B2B9 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		90B5BA332B3B5D7600E6B2B9 /* TrackDb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDb.swift; sourceTree = "<group>"; };
+		90B5BA372B3B6D9400E6B2B9 /* TrackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewModel.swift; sourceTree = "<group>"; };
+		90B5BA392B3B6E6100E6B2B9 /* TrackScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackScreen.swift; sourceTree = "<group>"; };
 		90E404DC2B093DE700D8A139 /* AppDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDatabase.swift; sourceTree = "<group>"; };
 		90E404DE2B093F6D00D8A139 /* PlaylistDb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistDb.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +80,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90E3B2BE2B084ED3002CACF2 /* RswiftLibrary in Frameworks */,
+				90B5BA3E2B3B7EDB00E6B2B9 /* UIPilot in Frameworks */,
 				90E3B2C42B085031002CACF2 /* GRDB in Frameworks */,
 				9077DA262B0903FF0077FDB8 /* DeezerSdk in Frameworks */,
 			);
@@ -222,6 +232,7 @@
 		90ACFB042B0847E700D13B1F /* DeezerPlaylists */ = {
 			isa = PBXGroup;
 			children = (
+				90B5BA302B3B5A4200E6B2B9 /* Track */,
 				9077DA282B090BA00077FDB8 /* Playlist */,
 				903CF4182B08EAE400B1A54E /* Common */,
 				90ACFB052B0847E700D13B1F /* DeezerPlaylistsApp.swift */,
@@ -249,11 +260,38 @@
 			path = DeezerPlaylistsTests;
 			sourceTree = "<group>";
 		};
+		90B5BA302B3B5A4200E6B2B9 /* Track */ = {
+			isa = PBXGroup;
+			children = (
+				90B5BA362B3B6D8600E6B2B9 /* UI */,
+				90B5BA352B3B6D7E00E6B2B9 /* Data */,
+			);
+			path = Track;
+			sourceTree = "<group>";
+		};
+		90B5BA352B3B6D7E00E6B2B9 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				90B5BA312B3B5A4F00E6B2B9 /* Track.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		90B5BA362B3B6D8600E6B2B9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				90B5BA372B3B6D9400E6B2B9 /* TrackViewModel.swift */,
+				90B5BA392B3B6E6100E6B2B9 /* TrackScreen.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		90E404DA2B093D8D00D8A139 /* Database */ = {
 			isa = PBXGroup;
 			children = (
 				90E404DC2B093DE700D8A139 /* AppDatabase.swift */,
 				90E404DE2B093F6D00D8A139 /* PlaylistDb.swift */,
+				90B5BA332B3B5D7600E6B2B9 /* TrackDb.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -279,6 +317,7 @@
 				90E3B2BD2B084ED3002CACF2 /* RswiftLibrary */,
 				90E3B2C32B085031002CACF2 /* GRDB */,
 				9077DA252B0903FF0077FDB8 /* DeezerSdk */,
+				90B5BA3D2B3B7EDB00E6B2B9 /* UIPilot */,
 			);
 			productName = DeezerPlaylists;
 			productReference = 90ACFB022B0847E700D13B1F /* DeezerPlaylists.app */;
@@ -333,6 +372,7 @@
 			packageReferences = (
 				90E3B2BC2B084ED3002CACF2 /* XCRemoteSwiftPackageReference "R" */,
 				90E3B2C22B085031002CACF2 /* XCRemoteSwiftPackageReference "GRDB.swift" */,
+				90B5BA3C2B3B7EDB00E6B2B9 /* XCRemoteSwiftPackageReference "UIPilot" */,
 			);
 			productRefGroup = 90ACFB032B0847E700D13B1F /* Products */;
 			projectDirPath = "";
@@ -369,6 +409,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9077DA312B090CEC0077FDB8 /* PlaylistRepository.swift in Sources */,
+				90B5BA322B3B5A4F00E6B2B9 /* Track.swift in Sources */,
+				90B5BA382B3B6D9400E6B2B9 /* TrackViewModel.swift in Sources */,
+				90B5BA3A2B3B6E6100E6B2B9 /* TrackScreen.swift in Sources */,
 				903CF41B2B08EAFE00B1A54E /* DependenciesContainer.swift in Sources */,
 				908BE1052B3B3C7700F172BF /* String.swift in Sources */,
 				9077DA2E2B090BD30077FDB8 /* PlaylistViewModel.swift in Sources */,
@@ -378,6 +421,7 @@
 				9077DA2A2B090BB60077FDB8 /* PlaylistsScreen.swift in Sources */,
 				90ACFB062B0847E700D13B1F /* DeezerPlaylistsApp.swift in Sources */,
 				9077DA332B090D340077FDB8 /* Playlist.swift in Sources */,
+				90B5BA342B3B5D7600E6B2B9 /* TrackDb.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,6 +726,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		90B5BA3C2B3B7EDB00E6B2B9 /* XCRemoteSwiftPackageReference "UIPilot" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/canopas/UIPilot.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.0.2;
+			};
+		};
 		90E3B2BC2B084ED3002CACF2 /* XCRemoteSwiftPackageReference "R" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mac-cain13/R.swift";
@@ -704,6 +756,11 @@
 		9077DA252B0903FF0077FDB8 /* DeezerSdk */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DeezerSdk;
+		};
+		90B5BA3D2B3B7EDB00E6B2B9 /* UIPilot */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 90B5BA3C2B3B7EDB00E6B2B9 /* XCRemoteSwiftPackageReference "UIPilot" */;
+			productName = UIPilot;
 		};
 		90E3B2BD2B084ED3002CACF2 /* RswiftLibrary */ = {
 			isa = XCSwiftPackageProductDependency;

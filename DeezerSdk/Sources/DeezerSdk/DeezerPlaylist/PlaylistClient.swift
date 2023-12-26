@@ -8,9 +8,9 @@
 import Foundation
 
 public protocol PlaylistClient {
-    func getUserPlaylists(userId: String) async throws -> [DeezerPlaylist]
+    func getPlaylists(userId: String) async throws -> [DeezerPlaylist]
     func getPlaylistinfos() async throws
-    func getPlaylistTracks() async throws
+    func getTracks(playlistId: Int) async throws -> [DeezerTrack]
 }
 
 internal class PlaylistHttpClient: PlaylistClient {
@@ -21,7 +21,7 @@ internal class PlaylistHttpClient: PlaylistClient {
         self.httpClient = httpClient
     }
     
-    func getUserPlaylists(userId: String) async throws -> [DeezerPlaylist] {
+    func getPlaylists(userId: String) async throws -> [DeezerPlaylist] {
         return try await searchAll { page, limit in
             let response: PaginatedResponse<DeezerPlaylist> = try await httpClient.get("/user/\(userId)/playlists")
             return response
@@ -33,7 +33,10 @@ internal class PlaylistHttpClient: PlaylistClient {
         
     }
     
-    func getPlaylistTracks() async throws {
-        
+    func getTracks(playlistId: Int) async throws -> [DeezerTrack] {
+        return try await searchAll { page, limit in
+            let response: PaginatedResponse<DeezerTrack> = try await httpClient.get("/playlist/\(playlistId)/tracks")
+            return response
+        }
     }
 }
