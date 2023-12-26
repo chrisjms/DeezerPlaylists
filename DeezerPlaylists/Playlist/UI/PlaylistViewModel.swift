@@ -12,7 +12,8 @@ struct PlaylistItem {
     let id: String
     let title: String
     let description: String
-    let picture: URL?
+    let pictureSmall: URL?
+    let pictureMedium: URL?
 }
 
 @MainActor
@@ -52,11 +53,12 @@ class PlaylistViewModel: ObservableObject {
     }
 }
 
-private extension PlaylistItem {
+extension PlaylistItem {
     init(_ playlist: Playlist) {
         self.id = playlist.id
         self.title = playlist.title
         self.description = playlist.description
-        self.picture = playlist.picture
+        self.pictureSmall = playlist.pictureSmall
+        self.pictureMedium = playlist.pictureMedium
     }
 }

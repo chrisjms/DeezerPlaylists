@@ -57,7 +57,8 @@ extension AppDatabase {
                 t.column("title", .text)
                 t.column("duration", .text)
                 t.column("nbTracks", .text)
-                t.column("picture", .text)
+                t.column("pictureSmall", .text)
+                t.column("pictureMedium", .text)
             }
             
             try db.create(table: "trackDb") { t in

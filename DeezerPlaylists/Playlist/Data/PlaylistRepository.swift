@@ -13,6 +13,7 @@ import GRDB
 protocol PlaylistRepository {
     func fetchPlaylists() async throws
     func observePlaylists() -> AnyPublisher<[Playlist], Error>
+    func observePlaylist(playlistId: String) -> AnyPublisher<Playlist?, Error>
     func observeTracks(playlistId: String) -> AnyPublisher<[Track], Error>
     func fetchTracks(playlistId: String) async throws
 }
@@ -40,7 +41,8 @@ class PlaylistHttpRepository: PlaylistRepository {
                     title: deezerPlaylist.title,
                     duration: deezerPlaylist.duration.toString(),
                     nbTracks: deezerPlaylist.nb_tracks.toString(),
-                    picture: deezerPlaylist.picture_small.absoluteString
+                    pictureSmall: deezerPlaylist.picture_small.absoluteString,
+                    pictureMedium: deezerPlaylist.picture_medium.absoluteString
                 ).upsert(db)
                 guard let tracksForPlaylist = deezerTracks[deezerPlaylist.id] else { return }
                 try tracksForPlaylist.forEach { track in
@@ -86,6 +88,23 @@ class PlaylistHttpRepository: PlaylistRepository {
                 return playlistsDb.map { playlistDb in
                     return Playlist(playlistDb)
                 }
+            }
+            .receive(on: DispatchQueue.main)
+            .eraseToAnyPublisher()
+    }
+    
+    func observePlaylist(playlistId: String) -> AnyPublisher<Playlist?, Error> {
+        let observationScheduler: ValueObservationScheduler = .async(onQueue: DispatchQueue.global())
+        
+        let playlistPub = ValueObservation.tracking { db in
+            try PlaylistDb
+                .fetchOne(db, id: playlistId)
+        }.publisher(in: database.dbWriter, scheduling: observationScheduler)
+        
+        return playlistPub
+            .map { playlistDb in
+                guard let playlistDb else { return nil }
+                return Playlist(playlistDb)
             }
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()

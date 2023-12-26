@@ -15,6 +15,7 @@ class TrackViewModel: ObservableObject {
     private let playlistRepository: PlaylistRepository
     
     @Published private (set) var tracks = [Track]()
+    @Published private (set) var playlist: PlaylistItem?
     
     private var cancellables = Set<AnyCancellable>()
 
@@ -30,6 +31,14 @@ class TrackViewModel: ObservableObject {
             .sink { _ in
             } receiveValue: { [weak self] tracks in
                 self?.tracks = tracks
+            }
+            .store(in: &cancellables)
+        
+        playlistRepository.observePlaylist(playlistId: playlistId)
+            .sink { _ in
+            } receiveValue: { [weak self] playlist in
+                guard let playlist else { return }
+                self?.playlist = PlaylistItem(playlist)
             }
             .store(in: &cancellables)
     }

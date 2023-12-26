@@ -13,6 +13,7 @@ public struct DeezerPlaylist: Codable {
     public let duration: Int
     public let nb_tracks: Int
     public let picture_small: URL
+    public let picture_medium: URL
     public let is_loved_track: Bool
     
     public init(
@@ -21,6 +22,7 @@ public struct DeezerPlaylist: Codable {
         duration: Int,
         nb_tracks: Int,
         picture_small: URL,
+        picture_medium: URL,
         is_loved_track: Bool
     ) {
         self.id = id
@@ -28,6 +30,7 @@ public struct DeezerPlaylist: Codable {
         self.duration = duration
         self.nb_tracks = nb_tracks
         self.picture_small = picture_small
+        self.picture_medium = picture_medium
         self.is_loved_track = is_loved_track
     }
     

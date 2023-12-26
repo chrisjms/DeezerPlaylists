@@ -12,6 +12,7 @@ struct TrackScreen: View {
     @ObservedObject var viewModel: TrackViewModel
     var body: some View {
         TrackView(
+            playlist: viewModel.playlist,
             tracks: viewModel.tracks,
             onPullToRefresh: viewModel.onPullToRefresh
         )
@@ -19,18 +20,35 @@ struct TrackScreen: View {
 }
 
 private struct TrackView: View {
+    let playlist: PlaylistItem?
     let tracks: [Track]
     let onPullToRefresh: () async -> ()
     var body: some View {
-        List(tracks, id: \.id) { track in
-            TrackCard(track: track)
-                .listRowSeparator(.hidden)
+        VStack {
+            if let playlist {
+                HeaderTrack(playlist: playlist)
+            }
+            List(tracks, id: \.id) { track in
+                TrackCard(track: track)
+                    .listRowSeparator(.hidden)
+            }
+            .refreshable {
+                await onPullToRefresh()
+            }
+            .listStyle(.inset)
+            .uipNavigationTitle("Tracks")
         }
-        .refreshable {
-            await onPullToRefresh()
+    }
+}
+
+private struct HeaderTrack: View {
+    let playlist: PlaylistItem
+    var body: some View {
+        if let picture = playlist.pictureMedium {
+            AsyncImage(url: picture)
         }
-        .listStyle(.inset)
-        .uipNavigationTitle("Tracks")
+        Text(playlist.title)
+        Text(playlist.description)
     }
 }
 
@@ -52,6 +70,13 @@ private struct TrackCard: View {
 
 #Preview {
     TrackView(
+        playlist: PlaylistItem(
+            id: "id1",
+            title: "playlist 1",
+            description: "20 titre et 245 min",
+            pictureSmall: nil,
+            pictureMedium: nil
+        ),
         tracks: [
             Track(
                 id: "id1",

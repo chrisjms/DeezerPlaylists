@@ -52,7 +52,7 @@ private struct PlaylistCard: View {
     let playlist: PlaylistItem
     var body: some View {
         HStack {
-            if let picture = playlist.picture {
+            if let picture = playlist.pictureSmall {
                 AsyncImage(url: picture)
             }
             VStack(alignment: .leading) {
@@ -72,25 +72,29 @@ private struct PlaylistCard: View {
                 id: "id1",
                 title: "playlist 1",
                 description: "20 titre et 245 min",
-                picture: nil
+                pictureSmall: nil,
+                pictureMedium: nil
             ),
             PlaylistItem(
                 id: "id2",
                 title: "playlist 2",
                 description: "24 titres et 200 min",
-                picture: nil
+                pictureSmall: nil,
+                pictureMedium: nil
             ),
             PlaylistItem(
                 id: "id3",
                 title: "playlist 3",
                 description: "13 titres et 29 min",
-                picture: nil
+                pictureSmall: nil,
+                pictureMedium: nil
             ),
             PlaylistItem(
                 id: "id4",
                 title: "playlist 4",
                 description: "10 titres et 99 min",
-                picture: nil
+                pictureSmall: nil,
+                pictureMedium: nil
             )
         ],
         onPullToRefresh: {}
