@@ -13,12 +13,21 @@
 		9077DA2E2B090BD30077FDB8 /* PlaylistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9077DA2D2B090BD30077FDB8 /* PlaylistViewModel.swift */; };
 		9077DA312B090CEC0077FDB8 /* PlaylistRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9077DA302B090CEC0077FDB8 /* PlaylistRepository.swift */; };
 		9077DA332B090D340077FDB8 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9077DA322B090D340077FDB8 /* Playlist.swift */; };
+		908BE1022B3B3B3900F172BF /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908BE1012B3B3B3900F172BF /* Int.swift */; };
+		908BE1052B3B3C7700F172BF /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908BE1042B3B3C7700F172BF /* String.swift */; };
+		908BE10A2B3B47DA00F172BF /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908BE1092B3B47DA00F172BF /* Int.swift */; };
+		908BE10D2B3B484B00F172BF /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908BE10C2B3B484B00F172BF /* String.swift */; };
+		908BE10F2B3B48EB00F172BF /* FakePlaylistRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908BE10E2B3B48EB00F172BF /* FakePlaylistRepository.swift */; };
+		908BE1132B3B494F00F172BF /* FakePlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908BE1122B3B494F00F172BF /* FakePlaylist.swift */; };
+		908BE1172B3B4B4B00F172BF /* PlaylistViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908BE1162B3B4B4B00F172BF /* PlaylistViewModelTests.swift */; };
+		908BE11A2B3B4FF100F172BF /* PublisherExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908BE1192B3B4FF100F172BF /* PublisherExpectation.swift */; };
 		90ACFB062B0847E700D13B1F /* DeezerPlaylistsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ACFB052B0847E700D13B1F /* DeezerPlaylistsApp.swift */; };
 		90ACFB0A2B0847E800D13B1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90ACFB092B0847E800D13B1F /* Assets.xcassets */; };
 		90ACFB0E2B0847E800D13B1F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90ACFB0D2B0847E800D13B1F /* Preview Assets.xcassets */; };
-		90ACFB182B0847E800D13B1F /* DeezerPlaylistsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ACFB172B0847E800D13B1F /* DeezerPlaylistsTests.swift */; };
 		90E3B2BE2B084ED3002CACF2 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 90E3B2BD2B084ED3002CACF2 /* RswiftLibrary */; };
 		90E3B2C42B085031002CACF2 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 90E3B2C32B085031002CACF2 /* GRDB */; };
+		90E404DD2B093DE700D8A139 /* AppDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E404DC2B093DE700D8A139 /* AppDatabase.swift */; };
+		90E404DF2B093F6D00D8A139 /* PlaylistDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E404DE2B093F6D00D8A139 /* PlaylistDb.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,13 +47,22 @@
 		9077DA2D2B090BD30077FDB8 /* PlaylistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistViewModel.swift; sourceTree = "<group>"; };
 		9077DA302B090CEC0077FDB8 /* PlaylistRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistRepository.swift; sourceTree = "<group>"; };
 		9077DA322B090D340077FDB8 /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
+		908BE1012B3B3B3900F172BF /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		908BE1042B3B3C7700F172BF /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		908BE1092B3B47DA00F172BF /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		908BE10C2B3B484B00F172BF /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		908BE10E2B3B48EB00F172BF /* FakePlaylistRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakePlaylistRepository.swift; sourceTree = "<group>"; };
+		908BE1122B3B494F00F172BF /* FakePlaylist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakePlaylist.swift; sourceTree = "<group>"; };
+		908BE1162B3B4B4B00F172BF /* PlaylistViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistViewModelTests.swift; sourceTree = "<group>"; };
+		908BE1192B3B4FF100F172BF /* PublisherExpectation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherExpectation.swift; sourceTree = "<group>"; };
 		90ACFB022B0847E700D13B1F /* DeezerPlaylists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeezerPlaylists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90ACFB052B0847E700D13B1F /* DeezerPlaylistsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerPlaylistsApp.swift; sourceTree = "<group>"; };
 		90ACFB092B0847E800D13B1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90ACFB0B2B0847E800D13B1F /* DeezerPlaylists.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DeezerPlaylists.entitlements; sourceTree = "<group>"; };
 		90ACFB0D2B0847E800D13B1F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		90ACFB132B0847E800D13B1F /* DeezerPlaylistsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeezerPlaylistsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		90ACFB172B0847E800D13B1F /* DeezerPlaylistsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerPlaylistsTests.swift; sourceTree = "<group>"; };
+		90E404DC2B093DE700D8A139 /* AppDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDatabase.swift; sourceTree = "<group>"; };
+		90E404DE2B093F6D00D8A139 /* PlaylistDb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistDb.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +89,8 @@
 		903CF4182B08EAE400B1A54E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				908BE1002B3B3B2F00F172BF /* Extensions */,
+				90E404DA2B093D8D00D8A139 /* Database */,
 				903CF4192B08EAF000B1A54E /* DI */,
 			);
 			path = Common;
@@ -118,6 +138,67 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		908BE1002B3B3B2F00F172BF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				908BE1012B3B3B3900F172BF /* Int.swift */,
+				908BE1042B3B3C7700F172BF /* String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		908BE1062B3B479900F172BF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				908BE1182B3B4FCA00F172BF /* TestHelpers */,
+				908BE1082B3B47CF00F172BF /* Repository */,
+				908BE1072B3B47A600F172BF /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		908BE1072B3B47A600F172BF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				908BE1092B3B47DA00F172BF /* Int.swift */,
+				908BE10C2B3B484B00F172BF /* String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		908BE1082B3B47CF00F172BF /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				908BE10E2B3B48EB00F172BF /* FakePlaylistRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		908BE1102B3B492900F172BF /* Playlist */ = {
+			isa = PBXGroup;
+			children = (
+				908BE1152B3B4B1C00F172BF /* UI */,
+			);
+			path = Playlist;
+			sourceTree = "<group>";
+		};
+		908BE1152B3B4B1C00F172BF /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				908BE1162B3B4B4B00F172BF /* PlaylistViewModelTests.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		908BE1182B3B4FCA00F172BF /* TestHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				908BE1122B3B494F00F172BF /* FakePlaylist.swift */,
+				908BE1192B3B4FF100F172BF /* PublisherExpectation.swift */,
+			);
+			path = TestHelpers;
+			sourceTree = "<group>";
+		};
 		90ACFAF92B0847E700D13B1F = {
 			isa = PBXGroup;
 			children = (
@@ -162,9 +243,19 @@
 		90ACFB162B0847E800D13B1F /* DeezerPlaylistsTests */ = {
 			isa = PBXGroup;
 			children = (
-				90ACFB172B0847E800D13B1F /* DeezerPlaylistsTests.swift */,
+				908BE1102B3B492900F172BF /* Playlist */,
+				908BE1062B3B479900F172BF /* Common */,
 			);
 			path = DeezerPlaylistsTests;
+			sourceTree = "<group>";
+		};
+		90E404DA2B093D8D00D8A139 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				90E404DC2B093DE700D8A139 /* AppDatabase.swift */,
+				90E404DE2B093F6D00D8A139 /* PlaylistDb.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,7 +370,11 @@
 			files = (
 				9077DA312B090CEC0077FDB8 /* PlaylistRepository.swift in Sources */,
 				903CF41B2B08EAFE00B1A54E /* DependenciesContainer.swift in Sources */,
+				908BE1052B3B3C7700F172BF /* String.swift in Sources */,
 				9077DA2E2B090BD30077FDB8 /* PlaylistViewModel.swift in Sources */,
+				908BE1022B3B3B3900F172BF /* Int.swift in Sources */,
+				90E404DF2B093F6D00D8A139 /* PlaylistDb.swift in Sources */,
+				90E404DD2B093DE700D8A139 /* AppDatabase.swift in Sources */,
 				9077DA2A2B090BB60077FDB8 /* PlaylistsScreen.swift in Sources */,
 				90ACFB062B0847E700D13B1F /* DeezerPlaylistsApp.swift in Sources */,
 				9077DA332B090D340077FDB8 /* Playlist.swift in Sources */,
@@ -290,7 +385,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90ACFB182B0847E800D13B1F /* DeezerPlaylistsTests.swift in Sources */,
+				908BE10F2B3B48EB00F172BF /* FakePlaylistRepository.swift in Sources */,
+				908BE11A2B3B4FF100F172BF /* PublisherExpectation.swift in Sources */,
+				908BE1172B3B4B4B00F172BF /* PlaylistViewModelTests.swift in Sources */,
+				908BE10D2B3B484B00F172BF /* String.swift in Sources */,
+				908BE1132B3B494F00F172BF /* FakePlaylist.swift in Sources */,
+				908BE10A2B3B47DA00F172BF /* Int.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
