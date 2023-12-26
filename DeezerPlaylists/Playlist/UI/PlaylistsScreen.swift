@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIPilot
 
 struct PlaylistsScreen: View {
     @ObservedObject var viewModel: PlaylistViewModel
@@ -18,21 +19,32 @@ struct PlaylistsScreen: View {
 }
 
 private struct PlaylistsView: View {
+    @EnvironmentObject var router: AppRouter
+    
     let playlists: [PlaylistItem]
     let onPullToRefresh: () async -> Void
     var body: some View {
-        NavigationStack {
-            List(playlists, id: \.id) { playlist in
-                PlaylistCard(playlist: playlist)
-                    .listRowSeparator(.hidden)
-            }
-            .refreshable {
-                await onPullToRefresh()
-            }
-            .listStyle(.inset)
-            .navigationTitle("Playlists")
-            .navigationBarTitleDisplayMode(.inline)
+        List(playlists, id: \.id) { playlist in
+            PlaylistCard(playlist: playlist)
+                .listRowSeparator(.hidden)
+                .background(
+                    NavigationLink(
+                        isActive: Binding(
+                            get: { false },
+                            set: { _ in
+                                router.push(.track(playlistId: playlist.id))
+                            }
+                        ),
+                        destination: {},
+                        label: {}
+                    ).opacity(0.0)
+                )
         }
+        .refreshable {
+            await onPullToRefresh()
+        }
+        .listStyle(.inset)
+        .uipNavigationTitle("Playlists")
     }
 }
 
@@ -40,8 +52,8 @@ private struct PlaylistCard: View {
     let playlist: PlaylistItem
     var body: some View {
         HStack {
-            if let picture = playlist.picture {
-                AsyncImage(url: playlist.picture)
+            if let picture = playlist.pictureSmall {
+                AsyncImage(url: picture)
             }
             VStack(alignment: .leading) {
                 Text(playlist.title)
@@ -60,25 +72,29 @@ private struct PlaylistCard: View {
                 id: "id1",
                 title: "playlist 1",
                 description: "20 titre et 245 min",
-                picture: nil
+                pictureSmall: nil,
+                pictureMedium: nil
             ),
             PlaylistItem(
                 id: "id2",
                 title: "playlist 2",
                 description: "24 titres et 200 min",
-                picture: nil
+                pictureSmall: nil,
+                pictureMedium: nil
             ),
             PlaylistItem(
                 id: "id3",
                 title: "playlist 3",
                 description: "13 titres et 29 min",
-                picture: nil
+                pictureSmall: nil,
+                pictureMedium: nil
             ),
             PlaylistItem(
                 id: "id4",
                 title: "playlist 4",
                 description: "10 titres et 99 min",
-                picture: nil
+                pictureSmall: nil,
+                pictureMedium: nil
             )
         ],
         onPullToRefresh: {}

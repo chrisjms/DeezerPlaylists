@@ -12,13 +12,15 @@ struct PlaylistDb: Identifiable, Codable, PersistableRecord, FetchableRecord, Eq
     let title: String
     let duration: String
     let nbTracks: String
-    let picture: String
-    
+    let pictureSmall: String
+    let pictureMedium: String
+
     fileprivate enum Colums {
         static let id = Column(CodingKeys.id)
         static let title = Column(CodingKeys.title)
         static let duration = Column(CodingKeys.duration)
         static let nbTracks = Column(CodingKeys.nbTracks)
-        static let picture = Column(CodingKeys.picture)
+        static let pictureSmall = Column(CodingKeys.pictureSmall)
+        static let pictureMedium = Column(CodingKeys.pictureMedium)
     }
 }

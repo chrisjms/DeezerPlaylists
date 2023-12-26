@@ -15,13 +15,17 @@ class DependenciesContainer: ObservableObject {
     
     lazy var database: AppDatabase = AppDatabase()
     
+    lazy var playlistRepository = PlaylistHttpRepository(
+        playlistClient: deezerSdk.playlistClient,
+        database: database
+    )
+    
     func makePlaylistViewModel() -> PlaylistViewModel {
-        return PlaylistViewModel(
-            playlistRepository: PlaylistHttpRepository(
-                playlistClient: deezerSdk.playlistClient,
-                database: database
-            )
-        )
+        return PlaylistViewModel(playlistRepository: playlistRepository)
+    }
+    
+    func makeTrackViewModel(playlistId: String) -> TrackViewModel {
+        return TrackViewModel(playlistId: playlistId, playlistRepository: playlistRepository)
     }
     
 }

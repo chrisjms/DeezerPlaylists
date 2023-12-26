@@ -12,7 +12,8 @@ struct Playlist {
     let title: String
     let duration: String
     let nbTracks: String
-    let picture: URL?
+    let pictureSmall: URL?
+    let pictureMedium: URL?
     
     var description: String {
         return nbTracks + " titres et " + duration + " min"
@@ -25,6 +26,7 @@ extension Playlist {
         self.title = playlistDb.title
         self.duration = playlistDb.duration
         self.nbTracks = playlistDb.nbTracks
-        self.picture = playlistDb.picture.toUrl()
+        self.pictureSmall = playlistDb.pictureSmall.toUrl()
+        self.pictureMedium = playlistDb.pictureMedium.toUrl()
     }
 }
